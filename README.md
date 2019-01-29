@@ -9,5 +9,33 @@
 
 `npm install --save electron`
 
+To start the app - 
+`npm start`
+
+# Install Electron packager
+### For use in npm scripts
+`npm install electron-packager --save-dev`
+
+### for use from cli
+`npm install electron-packager -g`
+
+### How to build a Production versio can be found [here](https://www.christianengvall.se/electron-packager-tutorial/).
+
+
 Screen Shot of the App.
-![Main Window](/wp.png "Title")
+![Main Window](/images/Main-Window.png)
+
+![Menu Items](/images/Add-Item.png)
+
+![Add Item](/images/Add-Item-Window.png)
+
+![Items Added](/images/Items-Added.png)
+
+![Clear Items](/images/Clear-Item.png)
+
+![Remove Items](/images/Items-Removed.png)
+
+
+>*All source code and credit goes to [Brad Traversy](https://github.com/bradtraversy) you can find his video on [Youtube](https://www.youtube.com/watch?v=kN1Czs0m1SU).*
+
+> Link to the original Git Repo [here](https://github.com/bradtraversy/electronshoppinglist).
