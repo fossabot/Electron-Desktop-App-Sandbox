@@ -1,8 +1,4 @@
-/*
-    Author - Avinash Singh
-    Build using Electron.
-    Date: 29 January 2019
-*/ 
+
 
 const electron = require('electron');
 const url = require('url');
