@@ -21,6 +21,16 @@ To start the app -
 
 ### How to build a Production versio can be found [here](https://www.christianengvall.se/electron-packager-tutorial/).
 
+### To Package & Build
+
+For Windows
+`npm run package-win`
+
+For Mac
+`npm run package-mac`
+
+For Linux
+`npm run package-linux`
 
 Screen Shot of the App.
 ![Main Window](/images/Main-Window.png)
