@@ -19,6 +19,12 @@
             const electron = require('electron');
             const {ipcRenderer} = electron;
             const ul = document.querySelector('ul');
+            
+
+            // DB Connection.
+            //document.getElementById("btn").addEventListener("click", () => {  
+            //});
+            // DB Connection.
 
             // Add item.
             ipcRenderer.on('item:add', function(e, item){

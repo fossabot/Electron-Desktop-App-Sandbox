@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/hirocsingh/Electron-Desktop-App-Sandbox#readme",
   "dependencies": {
-    "electron": "^4.0.2"
+    "electron": "^4.0.2",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
   },
   "devDependencies": {
     "electron-package": "^0.1.0"

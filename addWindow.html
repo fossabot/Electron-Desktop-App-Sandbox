@@ -21,20 +21,31 @@
         <script>
             const electron = require('electron');
             const {ipcRenderer} = electron;
-
+            const Sequelize = require('sequelize');
+            
             const form = document.querySelector('form');
             form.addEventListener('submit', submitForm);
 
             function submitForm(e){
-                e.preventDefault();
+                // e.preventDefault();
+                e.ItemTable;
                 const item = document.querySelector('#item').value;
                 ipcRenderer.send('item:add', item)
+
+                const ItemTable = sequelize.define('ItemTable', {
+                        Item: {
+                        type: Sequelize.STRING
+                    }
+                });
+                ItemTable.sync({force: true}).then(() => {
+                // Table created
+                    return ItemTable.create({
+                        Item: item
+                    });
+                });
+
+                
             }
-
-
         </script>
-
-
     </body>
-
 </html>

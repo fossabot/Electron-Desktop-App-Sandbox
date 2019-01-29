@@ -1,13 +1,12 @@
-
-
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
+const Sequelize = require('sequelize');
 
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 // SET ENV
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 
 let mainWindow;
 let addWindow;
@@ -86,6 +85,32 @@ const mainMenuTemplate = [
                 click()
                 {
                     mainWindow.webContents.send('item:clear');
+                }
+            },
+            {
+                label:'Test Connection',
+                click()
+                {
+                    var db_config = {
+                        host: '127.0.0.1',
+                        user: 'electron',
+                        password: '',
+                        port: 3306,
+                        database: 'testdb'
+                    }
+
+                    var sequelize = new Sequelize('mysql://' + db_config.user + ':' + db_config.password + 
+                    '@' + db_config.host + ':' + db_config.port + '/' + db_config.database + '');
+
+                    sequelize.authenticate().then(() => {
+                        console.log('=================================');
+                        console.log('database : ' + db_config.database + ' connected');
+                        console.log('=================================');
+                    }).catch((err) => {
+                        console.log('=================================');
+                        console.log('error connecting ' +  err);
+                        console.log('=================================');
+                    });
                 }
             },
             {
