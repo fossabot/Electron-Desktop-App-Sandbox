@@ -9,6 +9,9 @@
 
 `npm install --save electron`
 
+Added Node mysql module.
+`npm install mysql`
+
 To start the app - 
 `npm start`
 
