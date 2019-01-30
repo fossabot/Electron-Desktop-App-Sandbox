@@ -21,17 +21,17 @@
         <script>
             const electron = require('electron');
             const {ipcRenderer} = electron;
-            const Sequelize = require('sequelize');
             
+
             const form = document.querySelector('form');
             form.addEventListener('submit', submitForm);
 
             function submitForm(e){
-                // e.preventDefault();
+                e.preventDefault();
                 const item = document.querySelector('#item').value;
                 ipcRenderer.send('item:add', item)
-
-                var db_config = {
+            }
+                /*var db_config = {
                         host: '127.0.0.1',
                         user: 'electron',
                         password: '',
@@ -53,10 +53,7 @@
                     return itemTable.create({
                         Item: item
                     });
-                });
-
-                
-            }
+                });*/
         </script>
     </body>
 </html>

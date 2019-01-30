@@ -19,8 +19,13 @@
             const electron = require('electron');
             const {ipcRenderer} = electron;
             const ul = document.querySelector('ul');
-            
-
+            const mysql    = require('mysql');
+            var connection = mysql.createConnection({
+                host     : 'localhost',
+                user     : 'electron',
+                password : '',
+                database : 'testdb'
+            });
             // DB Connection.
             //document.getElementById("btn").addEventListener("click", () => {  
             //});

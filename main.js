@@ -2,11 +2,19 @@ const electron = require('electron');
 const url = require('url');
 const path = require('path');
 const Sequelize = require('sequelize');
-
+const mysql    = require('mysql');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 // SET ENV
 process.env.NODE_ENV = 'development';
+
+// DB Connection Config.
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'electron',
+    password : '',
+    database : 'testdb'
+});
 
 let mainWindow;
 let addWindow;
@@ -65,7 +73,21 @@ function createAddWindow(){
 // Catch item:add.
 ipcMain.on('item:add', function(e, item){
     console.log(item);
-    mainWindow.webContents.send('item:add', item);
+    mainWindow.webContents.send('item:add', item);     
+    /*connection.connect(function(err) {
+        if (err) {
+            console.error('error connecting: ' + err.stack);
+            return;
+        }
+                
+        console.log('connected as id ' + connection.threadId);
+    });*/
+
+    let sql = "INSERT INTO itemtable(Item) VALUES(" + "'" + item + "'" + ")" ; 
+    //const Sequelize = require('sequelize');
+    connection.query(sql); 
+
+    //connection.end();
     addWindow.close();
 });
 
@@ -87,7 +109,7 @@ const mainMenuTemplate = [
                     mainWindow.webContents.send('item:clear');
                 }
             },
-            {
+            /*{
                 label:'Test Connection',
                 click()
                 {
@@ -112,7 +134,7 @@ const mainMenuTemplate = [
                         console.log('=================================');
                     });
                 }
-            },
+            },*/
             {
                 label:'Quit',
                 accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',
