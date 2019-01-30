@@ -9,6 +9,7 @@
 
 `npm install --save electron`
 
+
 To start the app - 
 `npm start`
 
