@@ -1,5 +1,5 @@
 # Electron-Desktop-App-Sandbox
-## *Simple Electron Desktop App. Shopping List*
+## *Incredibly Mediocre Electron App. Shopping List & Loan Calculator Coming soon.....*
 
 1. Clone the Repository.
 2. Open the Repository in editor of your choice.
