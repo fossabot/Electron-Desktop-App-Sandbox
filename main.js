@@ -1,7 +1,6 @@
 const electron = require('electron');
 const url = require('url');
 const path = require('path');
-const Sequelize = require('sequelize');
 const mysql    = require('mysql');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
