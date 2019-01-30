@@ -5,7 +5,7 @@ const mysql    = require('mysql');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 // SET ENV
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 
 // DB Connection Config.
 var connection = mysql.createConnection({
@@ -27,7 +27,7 @@ app.on('ready', function(){
     //Load the HTML file in the window. 
     //Below code is passing "file://dirname/mainWindow.html" path to "MainWindow.loadURL".
     mainWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'mainWindow.html'),
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
     }));
