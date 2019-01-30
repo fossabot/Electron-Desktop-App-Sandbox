@@ -52,3 +52,5 @@ Screen Shot of the App.
 >*All source code and credit goes to [Brad Traversy](https://github.com/bradtraversy) you can find his video on [Youtube](https://www.youtube.com/watch?v=kN1Czs0m1SU).*
 
 > Link to the original Git Repo [here](https://github.com/bradtraversy/electronshoppinglist).
+
+> **Backend connectivity is my work. It is limited only to Inser values at the moment. Working on making it transactional.
