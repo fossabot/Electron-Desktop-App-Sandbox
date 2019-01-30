@@ -5,7 +5,7 @@ const mysql    = require('mysql');
 const {app, BrowserWindow, Menu, ipcMain} = electron;
 
 // SET ENV
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'production';
 
 // DB Connection Config.
 var connection = mysql.createConnection({
