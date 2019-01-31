@@ -73,14 +73,6 @@ function createAddWindow(){
 ipcMain.on('item:add', function(e, item){
     console.log(item);
     mainWindow.webContents.send('item:add', item);     
-    /*connection.connect(function(err) {
-        if (err) {
-            console.error('error connecting: ' + err.stack);
-            return;
-        }
-                
-        console.log('connected as id ' + connection.threadId);
-    });*/
 
     let sql = "INSERT INTO itemtable(Item) VALUES(" + "'" + item + "'" + ")" ; 
     //const Sequelize = require('sequelize');
@@ -108,32 +100,6 @@ const mainMenuTemplate = [
                     mainWindow.webContents.send('item:clear');
                 }
             },
-            /*{
-                label:'Test Connection',
-                click()
-                {
-                    var db_config = {
-                        host: '127.0.0.1',
-                        user: 'electron',
-                        password: '',
-                        port: 3306,
-                        database: 'testdb'
-                    }
-
-                    var sequelize = new Sequelize('mysql://' + db_config.user + ':' + db_config.password + 
-                    '@' + db_config.host + ':' + db_config.port + '/' + db_config.database + '');
-
-                    sequelize.authenticate().then(() => {
-                        console.log('=================================');
-                        console.log('database : ' + db_config.database + ' connected');
-                        console.log('=================================');
-                    }).catch((err) => {
-                        console.log('=================================');
-                        console.log('error connecting ' +  err);
-                        console.log('=================================');
-                    });
-                }
-            },*/
             {
                 label:'Quit',
                 accelerator: process.platform == 'darwin' ? 'Command+Q' : 'Ctrl+Q',

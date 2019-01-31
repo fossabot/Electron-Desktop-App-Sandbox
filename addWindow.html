@@ -32,31 +32,7 @@
                 e.preventDefault();
                 const item = document.querySelector('#item').value;
                 ipcRenderer.send('item:add', item)
-            }
-                /*var db_config = {
-                    // Configuration for DB Connectivity.
-                        host: '127.0.0.1',
-                        user: 'electron',
-                        password: '',
-                        port: 3306,
-                        database: 'testdb'
-                    }
-
-                var sequelize = new Sequelize('mysql://' + db_config.user + ':' + db_config.password + 
-                '@' + db_config.host + ':' + db_config.port + '/' + db_config.database + '');
-
-
-                const itemtable = sequelize.define('itemtable', {
-                        Item: {
-                        type: Sequelize.STRING
-                    }
-                });
-                itemtable.sync({force: true}).then(() => {
-                // Table created
-                    return itemTable.create({
-                        Item: item
-                    });
-                });*/
+            } 
         </script>
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="js/materialize.js"></script>
