@@ -53,4 +53,4 @@ Screen Shot of the App.
 
 > Link to the original Git Repo [here](https://github.com/bradtraversy/electronshoppinglist).
 
-> **Backend connectivity is my work. It is limited only to Inser values at the moment. Working on making it transactional.
+> **Backend connectivity is my work. It is limited only to Insert values at the moment. Working on making it transactional.
