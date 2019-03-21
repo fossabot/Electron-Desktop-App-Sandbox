@@ -37,6 +37,7 @@ For Linux
 
 Screen Shot of the App.
 ![Main Window](/images/Main-Window.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhirocsingh%2FElectron-Desktop-App-Sandbox.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhirocsingh%2FElectron-Desktop-App-Sandbox?ref=badge_shield)
 
 ![Menu Items](/images/Add-Item.png)
 
@@ -54,3 +55,7 @@ Screen Shot of the App.
 > Link to the original Git Repo [here](https://github.com/bradtraversy/electronshoppinglist).
 
 > **Backend connectivity is my work. It is limited only to Insert values at the moment. Working on making it transactional.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhirocsingh%2FElectron-Desktop-App-Sandbox.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhirocsingh%2FElectron-Desktop-App-Sandbox?ref=badge_large)
